@@ -9,7 +9,7 @@ In case there is no information on the parallaxes, masses and radii will be calc
 
 Run in case parallaxes are included:
 
-python mass_radius_age.py star on 
+    python mass_radius_age.py star on 
 Run in case parallaxes are not included:
 
 python mass_radius_age.py star off
