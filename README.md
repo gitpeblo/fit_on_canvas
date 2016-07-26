@@ -41,7 +41,8 @@ EXAMPLES:
     fit_on_canvas.py -FILE image1.fits -FILE image2.fits -WCS 62.466021 -56.118515 -BUFFER 0
 
    Will create "canvas\_image1.fits" and "canvas\_image2.fits", with each image
-   centered around RA = 62.466021 and Dec = -56.118515.
+   centered around (RA, Dec) = (62.466021, -56.118515).
    The images are trimmed to have no borders (BUFFER = 0), therefore at least
    one of the output images will "touch" the canvas border.
+
 
