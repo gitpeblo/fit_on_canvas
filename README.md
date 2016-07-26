@@ -1,7 +1,7 @@
 fit_on_canvas.py
 ================
 
-/ DESCRIPTION / ================
+/ DESCRIPTION /-----------------------------------------------------------------
 
 Given an input set of FITS images and corresponding (x,y) pixel positions
 ("centers"), this program expands each input image in order to accommodate all of
