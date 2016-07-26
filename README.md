@@ -33,14 +33,14 @@ only keep the valid data points), and then the desired BUFFER is added.
 
     fit_on_canvas.py -h
 
-PRODUCT: canvas_<fits1>, canvas_<fits2>, .. 
+PRODUCT: canvas\_<fits1>, canvas\_<fits2>, .. 
 RETURNS: list of output files     
 
 EXAMPLES:
 
     fit_on_canvas.py -FILE image1.fits -FILE image2.fits -WCS 62.466021 -56.118515 -BUFFER 0
 
-   Will create "canvas_image1.fits" and "canvas_image2.fits", with each image
+   Will create "canvas\_image1.fits" and "canvas\_image2.fits", with each image
    centered around RA = 62.466021 and Dec = -56.118515.
    The images are trimmed to have no borders (BUFFER = 0), therefore at least
    one of the output images will "touch" the canvas border.
