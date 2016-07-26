@@ -31,8 +31,9 @@ only keep the valid data points), and then the desired BUFFER is added.
 
 / USAGE / ----------------------------------------------------------------------
 
-USAGE: fit_on_canvas.py -h
-PRODUCT: canvas_<fits1>, canvas_<fits2>, ..
+    fit_on_canvas.py -h
+
+PRODUCT: canvas_<fits1>, canvas_<fits2>, .. 
 RETURNS: list of output files     
 
 EXAMPLES:
