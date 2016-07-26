@@ -37,7 +37,7 @@ RETURNS: list of output files
 
 EXAMPLES:
 
-$> fit_on_canvas.py -FILE image1.fits -FILE image2.fits -WCS 62.466021 -56.118515 -BUFFER 0
+    fit_on_canvas.py -FILE image1.fits -FILE image2.fits -WCS 62.466021 -56.118515 -BUFFER 0
 
    Will create "canvas_image1.fits" and "canvas_image2.fits", with each image
    centered around RA = 62.466021 and Dec = -56.118515.
