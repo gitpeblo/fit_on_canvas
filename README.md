@@ -1,16 +1,23 @@
 fit_on_canvas
 =============
 
-Get the stellar mass, radius and age from the Padova interface This code also includes mass and radius calculations using the Torres et al. 2010 calibration.
+Given an input set of FITS images and corresponding (x,y) pixel positions
+("centers"), this program expands each input image in order to accommodate all of
+them within a larger, common canvas.
+The field-of-views (FOVs) of the input images are expanded such as to keep the
+input (x,y) pixel positions at the center of the new canvas.
 
-Create a file 'star' and fill with the parameters: star name, temperature, error in temperature, metallicity, error in metallicity, V magnitude, error in V, parallax, error in parallax. The file 'star' is given as an example. This code will return the mass and radius from the Padova interface (http://stev.oapd.inaf.it/cgi-bin/param) in the 'stellar_characterization.dat' file.
+First, the common canvas size is determined adopting the maximum distance between
+the (x,y) centers and the border of each mage.
+Then, each image is re-plotted on the larger canvas (the number of output images
+corresponds to the number of input images).
 
-In case there is no information on the parallaxes, masses and radii will be calculated using only the calibration. Therefore, the user must specify with a flag
+The WCS coordinates of the output image are kept in place by updating the CRPIX
+keywords.
 
-Run in case parallaxes are included:
-
-    python mass_radius_age.py star on 
-Run in case parallaxes are not included:
-
-python mass_radius_age.py star off
-The user inputs the name of the file.
+A buffer (square annulus) can be placed around the images when they are placed
+on their canvases.
+If BUFFER is set to "None", the images will be projected on the canvas as they
+are (and no BUFFER is considered, i.e. it is set to 0).
+Otherwise, the images are first trimmed to minimize their size (i.e. in order to
+only keep the valid data points), and then the desired BUFFER is added.
